@@ -1,0 +1,200 @@
+/* General Styles for Footer */
+.footer {
+    margin: 10px 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-top-left p {
+    font-size: 20px;
+    max-width: 400px;
+}
+
+.footer-top-right {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.footer-email-input {
+    display: flex;
+    gap: 30px;
+    padding: 20px 30px;
+    border-radius: 50px;
+    background: #323238;
+    padding-left: 80px;
+}
+
+.footer-email-input input {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #a0a0a0;
+    font-family: "Outfit", serif;
+    font-size: 18px;
+}
+
+.footer-subscribe {
+    font-size: 20px;
+    padding: 22px 50px;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.footer-bottom-right {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-email-input:hover {
+    border: 2px solid white;
+}
+
+.footer-subscribe:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+/* Responsive Design for Devices <= 1024px */
+@media (max-width: 1024px) {
+    .footer {
+        margin: 20px 40px; /* Adjust margin */
+        gap: 20px; /* Reduce gap */
+    }
+
+    .footer-top {
+        flex-direction: column; /* Stack footer top content */
+        gap: 20px; /* Add gap between stacked items */
+    }
+
+    .footer-top-left p {
+        font-size: 18px; /* Reduce font size */
+        max-width: 100%; /* Allow text to take full width */
+    }
+
+    .footer-top-right {
+        flex-direction: column; /* Stack email input and subscribe button */
+        align-items: flex-start; /* Align to the left */
+        gap: 15px; /* Reduce gap */
+    }
+
+    .footer-email-input {
+        padding: 20px 20px; /* Reduce padding */
+        padding-left: 30px; /* Adjust padding */
+    }
+
+    .footer-email-input input {
+        font-size: 16px; /* Reduce font size */
+    }
+
+    .footer-subscribe {
+        font-size: 18px; /* Reduce font size */
+        padding: 18px 40px; /* Reduce padding */
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Stack footer bottom content */
+        gap: 15px; /* Add gap */
+    }
+
+    .footer-bottom-right {
+        gap: 20px; /* Reduce gap */
+    }
+}
+
+/* Responsive Design for Devices <= 768px */
+@media (max-width: 768px) {
+    .footer {
+        margin: 20px 15px; /* Further reduce margin */
+        gap: 15px; /* Reduce gap */
+    }
+
+    .footer-top-left p {
+        font-size: 16px; /* Reduce font size */
+    }
+
+    .footer-top-right {
+        flex-direction: column; /* Stack footer top content */
+        align-items: flex-start; /* Align to the left */
+        gap: 10px; /* Reduce gap */
+    }
+
+    .footer-email-input {
+        padding: 15px 15px; /* Reduce padding */
+        padding-left: 20px; /* Adjust padding */
+    }
+
+    .footer-email-input input {
+        font-size: 14px; /* Reduce font size */
+    }
+
+    .footer-subscribe {
+        font-size: 16px; /* Reduce font size */
+        padding: 15px 30px; /* Reduce padding */
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Stack footer bottom content */
+        gap: 10px; /* Reduce gap */
+    }
+
+    .footer-bottom-right {
+        gap: 15px; /* Reduce gap */
+    }
+}
+
+/* Responsive Design for Devices <= 480px */
+@media (max-width: 480px) {
+    .footer {
+        margin: 20px 10px; /* Minimal margin */
+        gap: 10px; /* Minimal gap */
+    }
+
+    .footer-top-left p {
+        font-size: 14px; /* Further reduce font size */
+    }
+
+    .footer-top-right {
+        flex-direction: column; /* Stack footer top content */
+        align-items: flex-start; /* Align to the left */
+        gap: 10px; /* Reduce gap */
+    }
+
+    .footer-email-input {
+        padding: 12px 12px; /* Minimal padding */
+        padding-left: 15px; /* Adjust padding */
+    }
+
+    .footer-email-input input {
+        font-size: 12px; /* Further reduce font size */
+    }
+
+    .footer-subscribe {
+        font-size: 14px; /* Further reduce font size */
+        padding: 12px 25px; /* Minimal padding */
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Stack footer bottom content */
+        gap: 5px; /* Minimal gap */
+    }
+
+    .footer-bottom-right {
+        gap: 10px; /* Minimal gap */
+    }
+}

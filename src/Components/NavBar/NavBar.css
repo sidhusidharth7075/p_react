@@ -1,0 +1,128 @@
+/* Base Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 150px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    font-size: 20px;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for mobile */
+}
+
+.nav-connect {
+    padding: 10px 30px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #8923E1 102.06%);
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s ease-in-out;
+}
+
+.nav-connect:hover {
+    transform: scale(1.05);
+    background: linear-gradient(267deg, #8923E1 0.36%, #DA7C25 102.06%); /* Reverse gradient on hover */
+}
+
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-menu li:hover {
+    color: #DA7C25; /* Highlight on hover */
+}
+
+.nav-menu li img {
+    display: flex;
+    margin: auto;
+}
+
+.anchor-link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+
+
+.nav-mob-close {
+    display: none;
+}
+
+.nav-mob-open {
+    display: none;
+}
+
+/* Responsive Design for Devices <= 768px */
+@media (max-width: 768px) {
+    .navbar {
+        margin: 10px 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .nav-connect {
+        display: none; /* Hide connect button on mobile */
+    }
+
+    .nav-mob-open {
+        display: block;
+        position: fixed;
+        right: 20px;
+        top: 15px;
+        cursor: pointer;
+        z-index: 3;
+        width: 30px;
+    }
+
+    .nav-mob-close {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        position: fixed;
+        flex-direction: column;
+        align-items: flex-start;
+        top: 0;
+        left: 0;
+        gap: 30px;
+        background-color: #1f0016;
+        width: 80%;
+        height: 100%;
+        z-index: 2;
+        transition: transform 0.5s ease-in-out;
+        transform: translateX(-100%);
+        padding: 20px 10px;
+        box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for the mobile menu */
+    }
+
+    .nav-menu.open {
+        transform: translateX(0);
+    }
+
+    .nav-menu li {
+        font-size: 18px;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        padding-left: 10px;
+    }
+
+    .anchor-link {
+        font-size: 18px;
+    }
+}

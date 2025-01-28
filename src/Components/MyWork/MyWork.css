@@ -1,0 +1,133 @@
+.mywork{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 80px 170px;
+}
+.mywork-title{
+    position: relative;
+}
+.mywork-title h1{
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+}
+.mywork-title img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.mywork-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+.mywork-container img{
+    box-sizing: border-box;
+    width: 419px;
+    height: 280px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.mywork-container img:hover{
+    transform: scale(1.10);
+    border: 4px solid #ff00ff;
+    border-radius: 10px;
+    transition:0.3s;
+}
+.mywork-showmore{
+    display: flex;
+    gap: 15px;
+    border-radius: 50px;
+    border: 2px solid white;
+    padding: 20px 40px;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 80px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+.mywork-showmore:hover{
+    gap: 30px;
+    transition: 0.6s;
+    
+}
+/* Responsive Design for Devices <= 1024px */
+@media (max-width: 1024px) {
+    .mywork {
+        padding: 60px 50px; /* Reduce padding */
+        gap: 60px; /* Adjust gap */
+    }
+
+    .mywork-title h1 {
+        font-size: 60px; /* Reduce title font size */
+    }
+
+    .mywork-container {
+        grid-template-columns: 1fr 1fr; /* Reduce columns to 2 */
+        gap: 30px; /* Adjust gap between items */
+    }
+
+    .mywork-container img {
+        width: 350px; /* Adjust image width */
+        height: 240px; /* Adjust image height */
+    }
+
+    .mywork-showmore {
+        padding: 15px 30px; /* Adjust padding */
+        font-size: 20px; /* Reduce font size */
+    }
+}
+
+/* Responsive Design for Devices <= 768px */
+@media (max-width: 768px) {
+    .mywork {
+        padding: 40px 20px; /* Further reduce padding */
+        gap: 40px; /* Reduce gap */
+    }
+
+    .mywork-title h1 {
+        font-size: 50px; /* Further reduce title font size */
+    }
+
+    .mywork-container {
+        grid-template-columns: 1fr; /* Stack items in one column */
+        gap: 20px; /* Reduce gap between items */
+    }
+
+    .mywork-container img {
+        width: 300px; /* Smaller image width */
+        height: 200px; /* Smaller image height */
+    }
+
+    .mywork-showmore {
+        padding: 10px 20px; /* Minimal padding */
+        font-size: 18px; /* Smaller font size */
+    }
+}
+
+/* Responsive Design for Devices <= 480px */
+@media (max-width: 480px) {
+    .mywork {
+        padding: 20px 10px; /* Minimal padding for very small screens */
+        gap: 20px; /* Minimal gap */
+    }
+
+    .mywork-title h1 {
+        font-size: 40px; /* Smaller title font size */
+        text-align: center; /* Center align title */
+    }
+
+    .mywork-container img {
+        width: 250px; /* Smaller image width */
+        height: 160px; /* Smaller image height */
+    }
+
+    .mywork-showmore {
+        padding: 8px 15px; /* Smaller padding */
+        font-size: 16px; /* Smaller font size */
+    }
+}
